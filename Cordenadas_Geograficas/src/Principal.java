@@ -1,0 +1,12 @@
+
+public class Principal {
+	public static void main(String[] args){
+		GeoPunto z, c;
+		z = new GeoPunto(-1.34, 34.5);
+		c= new GeoPunto(23.56, 98.74);
+		double f = z.Dstancia(c);
+		System.out.println("La Distancia es: "+f);
+		
+	}
+
+}
