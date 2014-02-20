@@ -11,9 +11,17 @@ public class Lugar {
        private String comentario;
        private long fecha;
        private float valoracion;
+       
+       private TipoLugar tipo;
+       
+       public Lugar() {
+           fecha = System.currentTimeMillis();
+           posicion = new GeoPunto(0, 0);
+           tipo = TipoLugar.OTROS;
+     }
 
        public Lugar(String nombre, String direccion, double longitud,
-             double latitud, int telefono, String url, String comentario,
+             double latitud, TipoLugar tipo, int telefono, String url, String comentario,
              int valoracion) {
              fecha = System.currentTimeMillis();
              posicion = new GeoPunto(longitud, latitud);
@@ -23,7 +31,16 @@ public class Lugar {
              this.url = url;
              this.comentario = comentario;
              this.valoracion = valoracion;
+             this.tipo = tipo;
        }
+
+	public TipoLugar getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoLugar tipo) {
+		this.tipo = tipo;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -102,6 +119,7 @@ public class Lugar {
 		return "Lugar [nombre=" + nombre + ", direccion=" + direccion
 				+ ", posicion=" + posicion + ", foto=" + foto + ", telefono="
 				+ telefono + ", url=" + url + ", comentario=" + comentario
-				+ ", fecha=" + fecha + ", valoracion=" + valoracion + "]";
+				+ ", fecha=" + fecha + ", valoracion=" + valoracion + ", tipo="
+				+ tipo + "]";
 	}
 }

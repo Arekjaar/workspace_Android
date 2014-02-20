@@ -5,5 +5,9 @@ class Principal {
         w = new Complejo(-1.2, 2.4);
         z.suma(w);
         System.out.println("Complejo: " + z);
+        z.suma(w.getReal(), w.getImaginario());
+        System.out.println("Complejo: " + z);
+        z.suma(w.getReal());
+        System.out.println("Complejo: " + z);
     }
 }

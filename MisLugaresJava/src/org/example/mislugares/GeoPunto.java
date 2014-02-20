@@ -10,6 +10,11 @@ public class GeoPunto {
 		this.latitud=latitud;
 	}
 	
+	public GeoPunto(int longitud, int latitud){
+		this.longitud=longitud;
+		this.latitud=latitud;
+	}
+	
 	public String toString(){
 		return "("+longitud+", "+latitud+")";
 	}
